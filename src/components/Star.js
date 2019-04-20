@@ -1,10 +1,10 @@
 import React from 'react';
 
 const Star = (props) =>
-  // 1. Call the function that updates the rating state each time a list item is clicked
-  // 2. Give the <li> the class 'selected' if it's one of the selected stars
   <li 
+		// call handleSetRating function when star is clicked
 		onClick={ props.setRating }
+		// Conditional to decide if star should be blue 'selected'
 		className={ props.isSelected ? 'selected' : null }
 	>
     <svg x="0px" y="0px"

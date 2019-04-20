@@ -2,9 +2,6 @@ import React, { Component } from 'react';
 import Course from './Course';
 
 class App extends Component {
-
-
-
 	render() {
 		return (
 			<div className="container">

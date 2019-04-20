@@ -10,7 +10,6 @@ const Course = (props) => {
       <h2>{ props.name }</h2>
       <p>{ props.desc }</p>
       <h3>Course Rating</h3>
-      {/* A self-contained star rating component */}
       <StarRating /> 
     </div>
   );

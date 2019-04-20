@@ -19,7 +19,10 @@ class StarRating extends Component {
 				<Star 
 					key={i}
 					index={i}
+					// true if rating state is greater than i
 					isSelected={ this.state.rating > i }
+					// Call handleSetRating function when li is clicked
+					// passing in i+1 as the rating
 					setRating={ () => this.handleSetRating(i + 1) }
 				/>
 			);
@@ -27,13 +30,15 @@ class StarRating extends Component {
 		return stars;
 	}
 
-  // Write an event handler that updates the rating state.
-  // Pass the function to a Star component via props
+// Update rating state.
+// Function is passed to each Star component via props
 handleSetRating = (rating) => {
+	// if rating entered is already the rating, reset rating
 	if(this.state.rating === rating) {
 		this.setState({ rating: 0 });
 	}
 	else {
+		// Set rating state to the star rating selected by user
 		this.setState({ rating });
 	}
 }
