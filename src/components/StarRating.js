@@ -15,13 +15,18 @@ class StarRating extends Component {
 		let stars = [];
 		let maxRating = 5;
 		for(let i = 0; i < maxRating; i++) {
+
+
 			stars.push(
 				<Star 
 					key={i}
 					index={i}
-					updateStars={this.handleSetRating}
+					rating={this.state.rating}
+					setRating={ () => this.handleSetRating(i + 1) }
 				/>
 			);
+
+
 		}
 		return stars;
 	}
