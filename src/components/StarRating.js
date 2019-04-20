@@ -18,7 +18,8 @@ class StarRating extends Component {
 			stars.push(
 				<Star 
 					key={i}
-					updateStars={this.updateStars}
+					index={i}
+					updateStars={this.handleSetRating}
 				/>
 			);
 		}
@@ -27,9 +28,8 @@ class StarRating extends Component {
 
   // Write an event handler that updates the rating state.
   // Pass the function to a Star component via props
-updateStars = () => {
-
-
+handleSetRating = (rating) => {
+	this.setState({ rating });
 }
 
   render() {
