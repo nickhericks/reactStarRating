@@ -1,6 +1,6 @@
-# React application - Full Stack JavaScript Techdegree
+# Star Rating application - Full Stack JavaScript Techdegree
 
-### Star Rating application
+<!-- ### Star Rating application -->
 This project was a way for me to practice initializing and managing state in React by building a star rating component.
 
 ***
@@ -17,19 +17,16 @@ This project was a way for me to practice initializing and managing state in Rea
 
 ## Code example
 ```javascript
-module.exports = (config) => {
-	return (req, res, next) => {
-		if (req.body.number === undefined) {
-			return next();
-		}
-		const num = parseFloat(req.body.number);
-		if (isNaN(num)) {
-			const err = new Error('submitted value is not a number');
-			return next(err);
-		}
-		const result = num * config.by;
-		req.multiplied = result;
-		next();
+// Update rating state.
+// Function is passed to each Star component via props
+handleSetRating = (rating) => {
+	// if rating entered is already the rating, reset rating
+	if(this.state.rating === rating) {
+		this.setState({ rating: 0 });
+	}
+	else {
+		// Set rating state to the star rating selected by user
+		this.setState({ rating });
 	}
 }
 ```
