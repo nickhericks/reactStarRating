@@ -20,14 +20,14 @@ This project was a way for me to practice initializing and managing state in Rea
 // Update rating state.
 // Function is passed to each Star component via props
 handleSetRating = (rating) => {
-	// if rating entered is already the rating, reset rating
-	if(this.state.rating === rating) {
-		this.setState({ rating: 0 });
-	}
-	else {
-		// Set rating state to the star rating selected by user
-		this.setState({ rating });
-	}
+  // if rating entered is already the rating, reset rating
+  if(this.state.rating === rating) {
+    this.setState({ rating: 0 });
+  }
+  else {
+    // Set rating state to the star rating selected by user
+    this.setState({ rating });
+  }
 }
 ```
 
