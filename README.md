@@ -1,6 +1,6 @@
-# Star Rating application - Full Stack JavaScript Techdegree
+# React Exercise - Full Stack JavaScript Techdegree
 
-<!-- ### Star Rating application -->
+### Star Rating application
 This project was a way for me to practice initializing and managing state in React by building a star rating component.
 
 ***
